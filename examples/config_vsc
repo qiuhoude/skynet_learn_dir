@@ -1,0 +1,16 @@
+include "config.path"
+
+thread = 4
+logger = "vscdebuglog" -- 将默认logger指定为`vscdebuglog`
+logservice = "snlua"
+
+logpath = "."
+harbor = 0
+start = "main"	-- main script
+bootstrap = "snlua bootstrap"	-- The service for bootstrap
+
+cpath = root.."cservice/?.so"
+
+-- 下面两个固定这样即可
+vscdbg_open = "$vscdbg_open"     
+vscdbg_bps = [=[$vscdbg_bps]=]
